@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useRestaurantStore } from "@/store/useRestaurantStore";
 import { useNavigate } from "react-router-dom";
-
+import { MoveRight } from "lucide-react"
 const RestaurantCard = () => {
   const { getAllRestaurants, allRestaurants, loading, getSingleRestaurant } =
     useRestaurantStore();
@@ -71,10 +71,13 @@ const RestaurantCard = () => {
             <div className="p-4 flex justify-end items-center">
               <button
                 className="flex items-center bg-red-600 text-white text-sm font-medium px-3 py-2 rounded-lg shadow-md hover:bg-red-700 hover:shadow-lg transition duration-300"
-                onClick={() => handleViewDetails(restaurant._id)}
+                onClick={() => {
+                  handleViewDetails(restaurant._id)
+                  window.scrollTo(0,0)
+                }}
               >
                 Menu
-                <span className="ml-2 material-icons">arrow_forward</span>
+                <span className="ml-2 material-icons"><MoveRight/></span>
               </button>
             </div>
           </div>

@@ -41,7 +41,7 @@ app.use("*", (_,res) => {
 
 // --------------- SERVER ---------------
 const PORT = process.env.PORT || 3000;
-httpServer.listen({ port: PORT, host: "0.0.0.0" }, () => {
+httpServer.listen( PORT , () => {
     connectDB();
     console.log(`Server running on port ${PORT}`);
 })

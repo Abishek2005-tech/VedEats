@@ -163,7 +163,9 @@ const SearchPage = () => {
                           <TrendingUp size={16} className="mr-1" />
                           <span className="text-sm font-medium">Popular Choice</span>
                         </div>
-                        <Link to={`/restaurant/${restaurant._id}`}>
+                        <Link onClick={() => {
+                          window.scrollTo(0,0)
+                        }} to={`/restaurant/${restaurant._id}`}>
                           <Button className="bg-restaurant-500 hover:bg-restaurant-600 text-white rounded-xl px-6">
                             View Menu
                           </Button>

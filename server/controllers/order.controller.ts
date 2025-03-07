@@ -112,7 +112,7 @@ export const stripeWebhook = async (req: Request, res: Response) => {
             if (!order) {
                 return ResponseHandler({ statusCode: StatusCodeUtility.NotFound, message: "Order not found", data: null, response: res });
             }
-            console.log(session)
+            // console.log(session)
             // Update the order with the amount and status
             if (session.amount_total) {
                 order.totalAmount = session.amount_total;

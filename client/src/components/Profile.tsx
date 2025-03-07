@@ -26,6 +26,7 @@ const Profile = () => {
     city: user?.city || "",
     country: user?.country || "",
     contact: user?.contact || "",
+    address: user?.address || "",
     profilePicture: user?.profilePicture || "",
   });
 
@@ -70,8 +71,6 @@ const Profile = () => {
     { id: 'profile', label: 'My Profile', icon: User },
     { id: 'orders', label: 'Order History', icon: Clock },
     { id: 'favorites', label: 'Favorites', icon: Heart },
-    { id: 'payment', label: 'Payment Methods', icon: CreditCard },
-    { id: 'settings', label: 'Settings', icon: Settings },
   ];
 
   return (
@@ -176,6 +175,15 @@ const Profile = () => {
                         className="bg-gray-50"
                       />
                     </div>
+                    <div className="space-y-2">
+                      <Label>Address</Label>
+                      <Input
+                        name="address"
+                        value={profileData.address}
+                        onChange={changeHandler}
+                        className="bg-gray-50"
+                      />
+                    </div>
 
                     <div className="space-y-2">
                       <Label>Contact</Label>
@@ -237,17 +245,6 @@ const Profile = () => {
                 </div>
               )}
 
-              {activeTab === 'payment' && (
-                <div className="text-center py-12 text-gray-500">
-                  Payment methods will be displayed here
-                </div>
-              )}
-
-              {activeTab === 'settings' && (
-                <div className="text-center py-12 text-gray-500">
-                  Account settings will be displayed here
-                </div>
-              )}
             </div>
           </div>
         </div>

@@ -49,7 +49,10 @@ const HeroSection = () => {
                     />
                   </div>
                   <Button 
-                    onClick={() => navigate(`/search/${searchText}`)}
+                    onClick={() => {
+                      navigate(`/search/${searchText}`)
+                      window.scrollTo(0, 0)
+                    }}
                     className="bg-restaurant-500 hover:bg-restaurant-600 text-white px-6 py-6 rounded-xl"
                   >
                     Search

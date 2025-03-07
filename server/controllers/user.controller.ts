@@ -161,12 +161,12 @@ export const checkAuth = async (req:Request, res:Response) => {
 export const updateProfile = async (req:Request, res:Response) => {
     try {
         const userId = req.id;
-        const {fullname,email,contact,city,country,profilePicture} = req.body;
+        const {fullname,email,contact,city,country,profilePicture,address} = req.body;
 
         let cloudResponse:any;
         try {
             cloudResponse = await cloudinary.uploader.upload(profilePicture);
-            const updatedData = {fullname,email,contact,city,country,profilePicture:cloudResponse.secure_url};
+            const updatedData = {fullname,email,contact,city,country,address,profilePicture:cloudResponse.secure_url};
             const user = await User.findByIdAndUpdate(userId,updatedData,{new:true}).select('-password');
             return ResponseHandler({statusCode: StatusCodeUtility.Success, message: "Profile updated successfully", data:{user} ,response: res });
         }

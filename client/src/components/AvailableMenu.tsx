@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Card, CardContent, CardFooter } from "./ui/card";
 import { useCartStore } from "@/store/useCartStore";
 import { useNavigate } from "react-router-dom";
+import { ShoppingCart } from "lucide-react"
 
 const AvailableMenu = ({ menus }: { menus: MenuItem[] }) => {
   const { addToCart } = useCartStore();
@@ -26,10 +27,11 @@ const AvailableMenu = ({ menus }: { menus: MenuItem[] }) => {
                 onClick={() => {
                   addToCart(menu);
                   navigate("/cart");
+                  window.scrollTo(0,0)
                 }}
                 className="w-full bg-red-600 hover:bg-red-700"
               >
-                Add to Cart
+                <ShoppingCart/>
               </Button>
             </CardFooter>
           </Card>

@@ -125,7 +125,9 @@ const Cart = () => {
           {/* Checkout Button */}
           <div className="mt-6 flex justify-end">
             <Button
-              onClick={() => setOpen(true)}
+              onClick={() => {
+                setOpen(true)
+              }}
               className="bg-red-600 hover:bg-red-500 px-6 py-3 text-lg font-semibold text-white rounded-lg transition"
             >
               Proceed to Checkout
