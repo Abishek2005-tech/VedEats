@@ -1,65 +1,113 @@
-# Contribution Guidelines for VedEats 🚀
-Thank you for contributing to VedEats! To keep the project organized and easy to maintain, we follow a few simple rules when naming Issues, Pull Requests (PRs), and Commits. Don't worry if you're new to this—just follow the steps below, and you'll be good to go!
+# 🚀 Contribution Guidelines for VedEats
 
-📌 How to Name Your Issues & Pull Requests
-When you create an Issue or a Pull Request, the title should follow a specific format called Conventional Commits. This helps us understand what your changes are about at a glance.
+Thank you for contributing to VedEats! To ensure a smooth and efficient development process, we follow a structured approach for naming Issues, Pull Requests (PRs), and Commits. This helps maintain clarity, consistency, and traceability across the project.
 
-# 🔖 Prefixes You Should Use
-Choose one of the following prefixes to start your title:
-ALso, first letter should be capital after the Prefix.
-**FEAT:**
-Use this when you're adding a new feature.
-Example: FEAT: Add user authentication flow
+## 📌 Naming Conventions for Issues & Pull Requests
+When creating an Issue or a Pull Request, use *Conventional Commits* formatting to describe your changes concisely. The format follows:
 
-**FIX:**
-Use this when you're fixing a bug or something that's broken.
-Example: FIX: Resolve crash when loading dashboard
 
-**DOCS:**
-Use this for documentation updates like README or comments in code.
-Example: DOCS: Update installation guide
+<PREFIX>: <Capitalized concise description>
 
-**STYLE:**
-Use this for style changes that don't affect the functionality, like formatting, adding spaces, or fixing indentation.
-Example: STYLE: Reformat code with consistent spacing
 
-**REFACTOR:**
-Use this when you're restructuring code but not adding new features or fixing bugs.
-Example: REFACTOR: Simplify API call logic
+### 🔖 Allowed Prefixes & Their Usage
+Each title must start with one of the following prefixes. Additionally, the first letter after the prefix should be capitalized.
 
-**PERF:**
-Use this if you're making performance improvements to make the app run faster.
-Example: PERF: Optimize image loading
+#### *1️⃣ FEAT (Feature)*
+Use this when introducing a new feature.
+- *Example:* FEAT: Implement user authentication flow
 
-**TEST:**
-Use this when you're adding or updating tests.
-Example: TEST: Add unit tests for login component
+#### *2️⃣ FIX (Bug Fix)*
+Use this when fixing a bug or resolving an issue.
+- *Example:* FIX: Resolve crash when loading dashboard
 
-**BUILD:**
-Use this for changes related to the build system or dependencies.
-Example: BUILD: Update React version to 18
+#### *3️⃣ DOCS (Documentation)*
+Use this for updates to documentation, such as README files, inline comments, or wikis.
+- *Example:* DOCS: Update installation guide
 
-**CHORE:**
-Use this for miscellaneous tasks like updating tools, configs, or scripts that don't change the app directly.
-Example: CHORE: Update ESLint config
+#### *4️⃣ STYLE (Code Style & Formatting)*
+Use this for non-functional code changes related to style, formatting, linting, etc.
+- *Example:* STYLE: Apply consistent code indentation
 
-**REVERT:**
-Use this when you need to undo a previous commit.
-Example: REVERT: Undo header layout changes
+#### *5️⃣ REFACTOR (Code Restructuring)*
+Use this when restructuring code without adding new features or fixing bugs.
+- *Example:* REFACTOR: Simplify API request handling
 
-# What to Avoid
-Here are examples of titles you shouldn’t use:
+#### *6️⃣ PERF (Performance Improvement)*
+Use this when optimizing the application’s performance.
+- *Example:* PERF: Optimize image loading for faster page speed
 
-❌ Added new feature
-(This doesn't tell us what feature you added!)
-❌ Bug fix in login functionality
-(Use the FIX prefix and be more specific about what was fixed.)
+#### *7️⃣ TEST (Testing & Test Cases)*
+Use this when adding or modifying test cases.
+- *Example:* TEST: Add unit tests for checkout process
 
-# ✅ Good Examples
-**FEAT:** Implement user profile page
-**FIX:** Correct error handling in signup form
-**STYLE:** Apply consistent button spacing
-**TEST:** Write tests for payment gateway
-By following these simple rules, you'll help keep VedEats organized and easy for everyone to work on. Thanks again for your contributions! 💪🍽️
+#### *8️⃣ BUILD (Build System & Dependencies)*
+Use this for changes that affect the build system, dependencies, or package management.
+- *Example:* BUILD: Upgrade React to version 18
 
-Happy coding! 🎉
+#### *9️⃣ CHORE (Maintenance & Miscellaneous Tasks)*
+Use this for non-functional changes like tool updates, refactoring configurations, or minor script changes.
+- *Example:* CHORE: Update ESLint rules
+
+#### *🔟 REVERT (Reverting Commits)*
+Use this when undoing a previous commit.
+- *Example:* REVERT: Undo header layout changes
+
+---
+
+## ❌ Naming Mistakes to Avoid
+Ensure your Issue and PR titles are clear, specific, and informative. Avoid vague or unclear descriptions like:
+
+🚫 Added new feature (What feature was added?)  
+🚫 Bug fix (What bug was fixed?)  
+🚫 Updated file (Which file? What was updated?)  
+
+✅ Instead, use:
+- FEAT: Implement dark mode for the UI
+- FIX: Resolve infinite loop in login validation
+- DOCS: Add API usage section to README
+
+---
+
+## ✅ Best Practices for Commits
+When writing commit messages, use the following structure:
+
+### 🔹 *Commit Message Format*
+
+<PREFIX>: <Short description>
+
+<Optional: Detailed description, if necessary>
+
+
+### 🔹 *Example Commit Messages*
+
+FEAT: Add social login support
+
+- Implement Google and Facebook authentication
+- Update backend to support OAuth flow
+- Modify UI for login options
+
+
+FIX: Correct navigation issue on mobile
+
+- Fix incorrect redirection after login
+- Adjust navbar styling for mobile view
+
+
+### 🔹 *Commit Guidelines*
+✅ Keep commit messages concise yet descriptive.  
+✅ Use imperative mood ("Add" instead of "Added").  
+✅ Break large changes into multiple commits.  
+✅ Reference relevant Issue or PR IDs where applicable.  
+
+---
+
+## 🎯 Summary
+✅ Use one of the specified prefixes (FEAT, FIX, DOCS, etc.).  
+✅ Keep Issue & PR titles concise, capitalized, and meaningful.  
+✅ Avoid vague or generic titles.  
+✅ Write clear, structured commit messages.  
+✅ Reference related Issues/PRs when necessary.  
+
+By following these simple guidelines, we ensure a streamlined and efficient contribution process. Thanks for helping keep VedEats organized and high-quality! 🎉🍽
+
+Happy coding! 🚀
